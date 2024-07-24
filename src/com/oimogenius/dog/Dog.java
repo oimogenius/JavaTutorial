@@ -1,6 +1,7 @@
 package com.oimogenius.dog;
 
-public class Dog {
+// 抽象クラス
+public abstract class Dog {
     // インスタンス変数
     // インスタンスの状態や情報を表すもの
     String name;
@@ -37,8 +38,6 @@ public class Dog {
                 " 犬種：" + breed + " 年齢" + age + "才");
     }
 
-    // 子クラスで実装するので、空にしておく
-    void walk() {
-
-    }
+    // 抽象メソッド
+    abstract void walk();
 }

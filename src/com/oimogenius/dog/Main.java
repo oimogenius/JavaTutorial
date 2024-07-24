@@ -5,6 +5,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        // 抽象クラスはインスタンス化できない
+//        Dog errorDog = new Dog();
+
         // 犬リストを作る
         List<Dog> dogs = new ArrayList<>();
         dogs.add(new Shiba("ポチ", 1, false));
