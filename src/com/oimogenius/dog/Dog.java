@@ -36,4 +36,9 @@ public class Dog {
         System.out.println("名前：" + name +
                 " 犬種：" + breed + " 年齢" + age + "才");
     }
+
+    // 子クラスで実装するので、空にしておく
+    void walk() {
+
+    }
 }
