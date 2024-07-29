@@ -14,6 +14,12 @@ public class Main {
         dogs.add(new Husky("ハナコ", 10, false));
         dogs.add(new Chihuahua("チクワ", 5, true));
 
+        // ペットリストを作る
+        // インターフェースも、クラスと同様に多態性を持っている
+        List<IPet> pets = new ArrayList<>();
+        pets.add(new Chihuahua("テワワ", 5, false));
+        pets.add(new Shiba("ボチ", 10, false));
+
         // 拡張for文
         for (Dog dog : dogs) {
             // オーバーライドしていないので、
@@ -32,6 +38,12 @@ public class Main {
             // instanceofの後ろで、変数を作ることができる
             if (dog instanceof Chihuahua chihuahua) {
                 chihuahua.shiver();
+            }
+
+            // ペットだったら、芸と遊ぶメソッドを呼び出す
+            if (dog instanceof IPet pet) {
+                pet.trick();
+                pet.play();
             }
         }
     }

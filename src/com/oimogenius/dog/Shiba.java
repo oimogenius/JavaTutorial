@@ -1,6 +1,6 @@
 package com.oimogenius.dog;
 
-public class Shiba extends Dog {
+public class Shiba extends Dog implements IPet {
     static final String BREED = "柴犬";
 
     public Shiba(String name, int age, boolean isHungry) {
@@ -15,5 +15,10 @@ public class Shiba extends Dog {
         // superの後に処理を書く
 //        super.walk();
         System.out.println("45分散歩するよ");
+    }
+
+    @Override
+    public void trick() {
+        System.out.println("お手！");
     }
 }

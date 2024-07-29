@@ -1,6 +1,6 @@
 package com.oimogenius.dog;
 
-public class Chihuahua extends Dog {
+public class Chihuahua extends Dog implements IPet {
     static final String BREED = "チワワ";
 
     public Chihuahua(String name, int age, boolean isHungry) {
@@ -15,5 +15,18 @@ public class Chihuahua extends Dog {
     // 震えるメソッド
     void shiver() {
         System.out.println("ブルブル");
+    }
+
+    @Override
+    public void trick() {
+        System.out.println("おすわり！");
+    }
+
+    @Override
+    public void play() {
+        // インターフェースのplayメソッドを呼び出す
+        IPet.super.play();
+        // チワワの独自処理
+        System.out.println("フリスビーでも遊ぶよ！");
     }
 }
